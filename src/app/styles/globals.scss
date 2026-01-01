@@ -1,0 +1,91 @@
+@use './variables.scss' as *;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: $Slate-900;
+}
+
+
+//FONTS
+@font-face{
+    font-family:'PlusJakartaSansBold';
+    src:url('../../../public/assets/fonts/static/PlusJakartaSans-Bold.ttf') format('truetype');
+    font-weight:900;
+}
+
+@font-face {
+    font-family:'PlusJakartaSansMed';
+    src: url('../../../public/assets//fonts//static//PlusJakartaSans-Medium.ttf') format('truetype');
+    font-weight:500;
+}
+
+/* Variable font: italic */
+@font-face{
+    font-family: 'PlusJakartaSansItalic';
+    src: url('../../../public/assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight:100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'PlusJakartaSansMedium';
+    src: url('../../../public/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: medium;
+    font-display: swap;
+}
+// GLOBAL ELEMENTS
+body {
+  font-family: 'RedhatReg', sans-serif;
+  background-color: White;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+input{
+    font-family: 'PlusJakartaSansMed', sans-serif;
+    border:none;
+    outline:none;
+    font-size: 16px;
+}
+.title{
+    font-family: 'PlusJakartaSansBold', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $Slate-900;
+    margin-bottom: 0.15rem;
+}
+.mortgage-container{
+    // display: flex;
+    // flex-direction: column;
+    gap: 32px;
+    padding: 1.5rem;
+    background-color: $White;
+    border-radius: 16px;
+    
+}
+.clear-button{
+    font-family: 'PlusJakartaSansMed', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: $Slate-500;
+    text-decoration: underline;
+}
+
+.inputs-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}

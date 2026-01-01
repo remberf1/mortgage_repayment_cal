@@ -1,0 +1,27 @@
+@use './variables.scss' as vars;
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 12px 16px;
+    gap: 8px;
+    background-color: vars.$Lime;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    font-family: 'PlusJakartaSansBold', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: vars.$Slate-900;
+    cursor: pointer;
+}

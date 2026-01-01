@@ -1,0 +1,39 @@
+/* Plus Jakarta Sans - Variable Font (Normal) */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Plus Jakarta Sans - Variable Font (Italic) */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/PlusJakartaSans-Italic-VariableFont.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Static fallback - Medium */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/static/PlusJakartaSans-Medium.ttf')
+    format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Static fallback - Bold */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('/assets/fonts/static/PlusJakartaSans-Bold.ttf')
+    format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
