@@ -3,13 +3,12 @@
 .container{
     display: flex;
     flex-direction: row;
-    gap: 8px;
-    // width: 60%;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
+    gap: 16px;
+    border-radius: 6px;
     border: 1px solid vars.$Slate-300;
-    padding: 2px 0px;
+    padding: 16px 8px;
+    margin-bottom: 0.5rem;
+    align-items: center;
 }
 
 .label{
@@ -18,5 +17,9 @@
     display: block;
     font-size: 1.25rem;
     color: vars.$Slate-900;
-    
+}
+
+.input{
+    scale: 2;
+    margin-left: 1rem;
 }

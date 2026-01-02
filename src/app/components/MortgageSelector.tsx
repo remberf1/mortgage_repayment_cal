@@ -10,8 +10,14 @@ interface MortgageSelectorProps {
 function MortgageSelector({ label,name, value,  onSelect }: MortgageSelectorProps) {
   return (
     <div className={styles.container}>
-      <input type="radio" name={name} id={name} value={value} onChange={() => onSelect(value || '')} />
-      <label className={`sr-only ${styles.label}`}>{label || 'Input'}</label>
+      <input 
+      type="radio" 
+      className={styles.input} 
+      name={name} 
+      id={value} 
+      value={value} 
+      onChange={() => onSelect(value || '')} />
+      <label htmlFor={value} className={`${styles.label}`}>{label || 'Input'}</label>
     </div>
   );
 }

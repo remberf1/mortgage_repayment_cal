@@ -11,6 +11,10 @@ body {
   padding: 0;
   color: $Slate-900;
 }
+p,h2,h3{
+    margin:0;
+    padding:0;
+}
 
 
 //FONTS
@@ -88,4 +92,17 @@ input{
     flex-direction: column;
     gap: 16px;
     margin-bottom: 24px;
+}
+.para{
+    font-family: 'PlusJakartaSansBold', sans-serif;
+    font-weight: 500;
+    display: block;
+    font-size: 1.25rem;
+    color: $Slate-500;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width:768px) {
+   
+    
 }

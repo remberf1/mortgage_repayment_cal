@@ -2,8 +2,14 @@
 import InputWithAddon from './components/InputWithAddon';
 import MortgageSelector from './components/MortgageSelector'
 import Button from './components/Button';
-
+import ResultsEmptyState from './components/ResultsEmptyState';
+import ResultsSummary from './components/ResultsSummary';
 export default function Home() {
+  const results = {
+  monthlyRepayment: "$1,500",
+  totalRepayment: "$540,000",
+};
+
   return (
     <div>
       <main>
@@ -28,17 +34,23 @@ export default function Home() {
            type='number'/>
             </div>
             <div>
-          <p>Mortgage Type</p>
+              <p className='para'>Mortgage Type</p>
           <MortgageSelector
+           name="mortgageType"
+           value='repayment'
             label='Repayment'
             onSelect={() => {console.log('Option selected');}}/>
             <MortgageSelector
-            label='Interest Type'
+             name="mortgageType"
+            value='interest-only'
+            label='Interest Only'
             onSelect={() => {console.log('Option selected');}}/>
             </div>
           <Button />
             </div>
         </div>
+          {/* <ResultsEmptyState /> */}
+          <ResultsSummary results={results} />
       </main>
     </div>
   );
