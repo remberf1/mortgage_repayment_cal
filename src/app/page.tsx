@@ -2,26 +2,24 @@
 import InputWithAddon from './components/InputWithAddon';
 import MortgageSelector from './components/MortgageSelector'
 import Button from './components/Button';
-import ResultsEmptyState from './components/ResultsEmptyState';
-import ResultsSummary from './components/ResultsSummary';
+import MortgageResultsPanel from './components/MortgageResultsPanel';
 export default function Home() {
-  const results = {
-  monthlyRepayment: "$1,500",
-  totalRepayment: "$540,000",
-};
+ 
 
   return (
-    <div>
       <main>
+        <div className='container'>
         <div className='mortgage-container'>
-        <div>
+          <div className='title-container'>
           <p className='title'>Mortgage Calculator</p>
           <button className='clear-button'>Clear All</button>
+          </div>
           <div className='inputs-container'>
           <InputWithAddon 
            label='Mortgage Amount'
            addon='&pound;'
            type='number'/>
+           <div className='inputs-container--desktop'>
            <InputWithAddon 
            label='Mortgage Term'
            addon='years'
@@ -32,6 +30,7 @@ export default function Home() {
            addon='%'
            addonPosition='right'
            type='number'/>
+           </div>
             </div>
             <div>
               <p className='para'>Mortgage Type</p>
@@ -42,16 +41,18 @@ export default function Home() {
             onSelect={() => {console.log('Option selected');}}/>
             <MortgageSelector
              name="mortgageType"
-            value='interest-only'
-            label='Interest Only'
+             value='interest-only'
+             label='Interest Only'
             onSelect={() => {console.log('Option selected');}}/>
             </div>
           <Button />
-            </div>
         </div>
-          {/* <ResultsEmptyState /> */}
-          <ResultsSummary results={results} />
+        <div className='results-container'>
+        <MortgageResultsPanel
+        results={null} />
+        </div>
+        </div>
       </main>
-    </div>
+    
   );
 }

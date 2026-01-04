@@ -4,33 +4,38 @@
     font-family: 'PlusJakartaSansBold', sans-serif;
     font-weight: 500;
     display: block;
-    font-size: 14px;
+    font-size: .875rem;
     color: vars.$Slate-500;
     margin-bottom: 8px;
 }
 .inputContainer{
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
     border: 1px solid vars.$Slate-300;
     border-radius: 8px;
     background-color: vars.$White;
-    // width: 60%;
+    padding: 0 0;
 
     &:focus-within{
         border-color: vars.$Slate-500;
         box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.3);
     }
+    &:hover{
+        border-color: vars.$Slate-500;
+        box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.3);
+        cursor: pointer;
+    }
 }
 
 .input{
-    // flex: 1;
-    // padding: 12px 16px;
+
     font-family: 'PlusJakartaSansMed', sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: vars.$Slate-900;
     border-radius: 8px;
+    margin-left: 0.5rem;
 
     &::placeholder{
         color: vars.$Slate-300;
@@ -42,15 +47,13 @@
     font-weight: 500;
     font-size: 16px;
     color: vars.$Slate-700;
-    padding: 4px 8px;
-    // flex:3;
-
+    padding: 8px 0px;
 }
 
 .addonContainer{
     background-color: vars.$Slate-100;
     border-radius: 0 8px 8px 0;
-    padding: 0 16px;
+    padding: 0 12px;
 }
 .addonContainerLeft{
     background-color: vars.$Slate-100;

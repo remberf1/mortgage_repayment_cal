@@ -7,10 +7,13 @@
     justify-content: center;
     cursor: pointer;
     border-radius: 60px;
-    padding: 16px 16px;
+    padding: 12px;
     gap: 8px;
     background-color: vars.$Lime;
     margin-top: 1.5rem;
+}
+.container:hover{
+    background-color: lighten(vars.$Lime,20%);
 }
 
 .button{
@@ -21,4 +24,10 @@
     font-size: 1.25rem;
     color: vars.$Slate-900;
     cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+    .container{
+        width: 60%;
+    }
 }

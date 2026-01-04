@@ -5,11 +5,11 @@
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
-    // gap: 1rem;
     text-align: center;
     color: vars.$White;
     background-color: vars.$Slate-900;
     padding: 2rem 2rem;
+    height: 100%;
 }
 .image{
     padding-bottom: 1rem;
@@ -22,4 +22,12 @@
 }
 .description{
     color: vars.$Slate-300;
+    max-width: 45ch;
+}
+
+@media screen and (min-width:768px) {
+    .emptyState{
+        margin-top: 0;
+        border-radius: 0 24px 24px 48px;
+    }
 }

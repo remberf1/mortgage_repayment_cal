@@ -1,4 +1,5 @@
 import styles from '../styles/InputWithAddon.module.scss';
+import { useId } from 'react';
 
 interface InputWithAddonProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -6,31 +7,52 @@ interface InputWithAddonProps
   addon?: string;
   addonPosition?: 'left' | 'right';
 }
-function InputWithAddon({  label, addon, placeholder, type, addonPosition='left' }: InputWithAddonProps) {
-  return <div>
-    <label className={`sr-only ${styles.label}`}>{label || 'Input'}</label>
-    <div className={styles.inputContainer}>
-      {/* Addon left */}
+
+function InputWithAddon({
+  label,
+  addon,
+  placeholder,
+  type,
+  addonPosition = 'left',
+  id,
+  ...props
+}: InputWithAddonProps) {
+
+  const generatedId = useId();
+  const inputId = id ?? generatedId;
+
+  return (
+    <div>
+      <label
+        htmlFor={inputId}
+        className={`sr-only ${styles.label}`}
+      >
+        {label || 'Input'}
+      </label>
+
+      <div className={styles.inputContainer}>
         {addon && addonPosition === 'left' && (
           <div className={styles.addonContainerLeft}>
             <p className={styles.addon}>{addon}</p>
           </div>
         )}
-      <input
-        type={type || 'text'}
-        placeholder={placeholder || ''}
-        className={styles.input}
-      />
-      {addon && addonPosition === 'right' && (
-        <div className={styles.addonContainer}>
-        <p className={styles.addon}>
-          {addon}
-        </p>
-        </div>
-      )}
-      
+
+        <input
+          id={inputId}
+          type={type || 'text'}
+          placeholder={placeholder || ''}
+          className={styles.input}
+          {...props}
+        />
+
+        {addon && addonPosition === 'right' && (
+          <div className={styles.addonContainer}>
+            <p className={styles.addon}>{addon}</p>
+          </div>
+        )}
+      </div>
     </div>
-    </div>;
+  );
 }
 
 export default InputWithAddon;

@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   color: $Slate-900;
+  height: 100%;
 }
 p,h2,h3{
     margin:0;
@@ -97,12 +98,48 @@ input{
     font-family: 'PlusJakartaSansBold', sans-serif;
     font-weight: 500;
     display: block;
-    font-size: 1.25rem;
+    font-size: .875rem;
     color: $Slate-500;
     margin-bottom: 8px;
 }
 
-@media screen and (max-width:768px) {
-   
-    
+@media screen and (min-width:768px) {
+    body{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $Slate-100;
+
+    }
+    .title-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+   .container{
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px; 
+    background-color: $White;
+    overflow: hidden;
+    gap:1rem;
+    border-radius: 16px 24px 24px 16px;
+   }
+
+.results-container,.mortgage-container {
+  flex: 1;
+}
+
+
+.mortgage-container{
+    border-radius: 16px 0 0 16px;
+    padding: 1.5rem;
+}
+.inputs-container--desktop {
+    display: flex;
+    gap: 24px;  
+}
+
 }

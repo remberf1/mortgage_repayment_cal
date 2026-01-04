@@ -1,5 +1,5 @@
 'use client';
-import styles from '../styles/mortgageselcetor.module.scss';
+import styles from '../styles/mortgageselector.module.scss';
 interface MortgageSelectorProps {
   label?: string;
   name?: string;
