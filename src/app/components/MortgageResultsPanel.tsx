@@ -1,8 +1,14 @@
 import ResultsEmptyState from './ResultsEmptyState';
 import ResultsSummary from './ResultsSummary';
 import styles from '../styles/mortgagepanel.module.scss';
+import type { MortgageResults } from '../types/mortgage';
 
-function MortgageResultsPanel({ results }) {
+interface MortgageResultsPanelProps {
+  results: MortgageResults | null;
+}
+
+
+function MortgageResultsPanel({ results }:MortgageResultsPanelProps) {
   if (!results) {
     return (
       <div className={styles.resultsContainer}>

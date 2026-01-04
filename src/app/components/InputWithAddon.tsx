@@ -6,6 +6,7 @@ interface InputWithAddonProps
   label?: string;
   addon?: string;
   addonPosition?: 'left' | 'right';
+  error?: string;
 }
 
 function InputWithAddon({
@@ -15,6 +16,7 @@ function InputWithAddon({
   type,
   addonPosition = 'left',
   id,
+  error,
   ...props
 }: InputWithAddonProps) {
 
@@ -30,7 +32,7 @@ function InputWithAddon({
         {label || 'Input'}
       </label>
 
-      <div className={styles.inputContainer}>
+      <div className={`${styles.inputContainer} ${error ? styles.inputError : ''}`}>
         {addon && addonPosition === 'left' && (
           <div className={styles.addonContainerLeft}>
             <p className={styles.addon}>{addon}</p>
@@ -46,11 +48,14 @@ function InputWithAddon({
         />
 
         {addon && addonPosition === 'right' && (
-          <div className={styles.addonContainer}>
+          <div className={styles.addonContainerRight}>
             <p className={styles.addon}>{addon}</p>
           </div>
         )}
+
+
       </div>
+        {error && <p className={styles.error}>{error}</p>}
     </div>
   );
 }

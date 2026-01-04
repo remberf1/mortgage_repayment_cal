@@ -1,9 +1,12 @@
 import Image from "next/image";
 import styles from '../styles/Button.module.scss';
-function Button() { 
+interface ButtonProps {
+  onClick: () => void;
+}
+function Button({ onClick }: ButtonProps) { 
     return <div className={styles.container}>
         <Image src="/assets/images/icon-calculator.svg" alt="Button Image" width={30} height={30}/>
-        <button className={styles.button}>Calculate Repayments</button>
+        <button onClick={onClick} className={styles.button}>Calculate Repayments</button>
         </div>;
 }
 
