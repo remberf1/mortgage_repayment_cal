@@ -105,6 +105,7 @@ useEffect(() => {
           onClick={() => {
             setAmount('');
             setTerm('');
+            setResults(null); 
             setRate('');
             setMortgageType('');
           }}
