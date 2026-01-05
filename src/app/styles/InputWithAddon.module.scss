@@ -10,7 +10,7 @@
 }
 .inputContainer{
     display: flex;
-    
+    justify-content: space-between;
     align-items: center;
     border: 1px solid vars.$Slate-300;
     border-radius: 8px;

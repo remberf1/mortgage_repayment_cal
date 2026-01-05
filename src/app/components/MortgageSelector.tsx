@@ -5,19 +5,22 @@ interface MortgageSelectorProps {
   name?: string;
   value?: string;
   error?: string;
+  selectedValue?: string;
    onSelect: (option: string) => void;
 }
 
-function MortgageSelector({ label,name, value,  onSelect, error }: MortgageSelectorProps) {
+function MortgageSelector({ label,name, value,  onSelect, error,selectedValue}: MortgageSelectorProps) {
+    const isActive = value === selectedValue;
   return (
     <>
-    <div className={styles.container}>
+    <div className={`${styles.container} ${isActive ? styles.active : ''}`}>
       <input 
       type="radio" 
       className={styles.input} 
       name={name} 
       id={value} 
-      value={value} 
+      value={value}
+      checked={isActive}
       onChange={() => onSelect(value || '')} />
       <label htmlFor={value} className={`${styles.label}`}>{label || 'Input'}</label>
     </div>

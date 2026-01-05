@@ -9,6 +9,7 @@
     padding: 8px 8px;
     margin-bottom: 0.5rem;
     align-items: center;
+    
 }
 
 .label{
@@ -36,4 +37,10 @@
     font-size: 12px;
     color: vars.$Red;
     margin-top: .75rem;
+}
+.active{
+    border-color: vars.$Lime;
+}
+.container.active{
+     background-color: lighten(vars.$Lime, 30%);
 }

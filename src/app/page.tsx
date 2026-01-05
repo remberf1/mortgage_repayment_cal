@@ -145,12 +145,14 @@ useEffect(() => {
            value='repayment'
             label='Repayment'
             onSelect= { setMortgageType}
+            selectedValue={mortgageType}
               />
             <MortgageSelector
              name="mortgageType"
              value='interest-only'
              label='Interest Only'
              onSelect= { setMortgageType}
+             selectedValue={mortgageType}
              error={typeError}
             />
             </div>
